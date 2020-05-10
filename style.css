@@ -22,33 +22,22 @@ body {
 .recipe-title {
     background-color: white;
     font-size: 24px;
-    padding: 5px 0;
+    padding: 2px 5px;
+    margin: 0;
+}
+.recipe-description {
+    background-color: white;
+    font-size: 16px;
+    text-align: justify;
+    padding: 2px 5px;
     margin: 0;
 }
 
-.recipe-description {
-    font-size: 16px;
-    text-align: justify;
-    margin: 5px 0 0;
-    background-color: white;
-    padding: 5px 5px;
-
-}
 
 @media only screen and (max-width: 310px) {
     .recipe-container {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
-    }
-
-    .recipe {
-
-    }
-
-    .recipe-description {}
-
-    .recipe-info {
-        width: 100%;
     }
 }
