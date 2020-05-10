@@ -42,7 +42,6 @@ body {
     min-height: auto;
 }
 
-
 @media only screen and (max-width: 640px) {
     .recipe {
         margin: 10px;
@@ -58,9 +57,32 @@ body {
     }
 }
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 500px) {
+    body {
+        margin: 5px;
+    }
     .recipe {
-        margin: 10px;
+        margin: 10px 0;
+        text-align: center;
+        max-width: unset;
+    }
+
+    .img-container {
+        border-style: solid;
+        border-color: white;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body {
+        margin: 0;
+    }
+
+    .recipe {
+        margin: 10px 0;
         text-align: center;
     }
 
