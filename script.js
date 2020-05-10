@@ -7,6 +7,9 @@ request.send();
 
 request.onload = function() {
     let recipes = request.response;
-    console.log(recipes.productList);
+    console.log(recipes);
 };
+
+const PRODUCT_LIST_TABLE = document.getElementById("product-list-table");
+const RECIPE_DESCRIPTION = document.getElementById("recipe-description");
 

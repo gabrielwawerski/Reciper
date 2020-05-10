@@ -1,0 +1,18 @@
+#recipe-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#recipe-header {
+   text-align: center;
+}
+
+#product-list-container {
+    flex-basis: 15%;
+    min-width: 150px;
+}
+
+#recipe-description-container {
+    flex-basis: 60%;
+}
