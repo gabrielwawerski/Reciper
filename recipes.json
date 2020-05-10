@@ -1,0 +1,9 @@
+{
+  "name": "recipe1",
+  "description": "asd",
+  "productList": [
+    "product1",
+    "product2",
+    "product3"
+  ]
+}
