@@ -1,9 +1,32 @@
 {
-  "name": "Risotto with chicken, vegetables and mushrooms",
-  "description": "asd",
-  "productList": [
-    "product1",
-    "product2",
-    "product3"
+  "recipes": [
+    {
+      "name": "Risotto with chicken, vegetables and mushrooms",
+      "productList": [
+        "rice",
+        "mushrooms",
+        "chicken"
+      ],
+      "description": "risotto description"
+    },
+    {
+      "name": "Pasta salad with bacon",
+      "productList": [
+        "product1",
+        "product2"
+      ],
+      "description": "pasta salad recipe"
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "productList": [
+        "spaghetti pasta",
+        "350g of bacon",
+        "sour double cream",
+        "parmesan cheese",
+        "2 eggs"
+      ],
+      "description": "carbonara recipe"
+    }
   ]
 }
