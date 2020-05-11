@@ -1,8 +1,7 @@
 #recipe-content {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-
 }
 
 #recipe-header {
@@ -21,8 +20,10 @@
 }
 
 #recipe-description-container {
-    flex-basis: 60%;
+    /*flex-basis: 60%;*/
     padding: 5px;
+    width: 100%;
+
 }
 
 #recipe-description-name {
@@ -31,4 +32,25 @@
 }
 
 #recipe-description-data {
+    padding: 0 16px;
+}
+
+ul {
+    -webkit-padding-start: 0;
+    padding: 0 5px;
+    list-style: none;
+}
+
+ol {
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    #recipe-content {
+        flex-direction: column;
+    }
+
+    #recipe-description-container {
+        width: unset;
+    }
 }
