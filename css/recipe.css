@@ -1,10 +1,14 @@
+body {
+    margin: 0 60px;
+}
+
 /* Dotted border */
 .dotted {
     border-bottom: 1px dotted #bbb;
 }
 
 #recipe-header {
-    display: block;
+    display: inline-block;
     text-align: center;
     margin: 10px 0;
     width: 100%;
@@ -12,6 +16,7 @@
 
 #back-button-container {
     float: left;
+    position: absolute;
 }
 
 .back-button {
@@ -31,6 +36,7 @@
 #recipe-img {
     width: 225px;
     height: 225px;
+    padding: 20px 0 5px;
     vertical-align: top;
 }
 
@@ -95,7 +101,7 @@ li {
 
 @media only screen and (max-width: 600px) {
     body {
-        /*margin: 0;*/
+        margin: 0 10px;
     }
 
     #recipe-content {
