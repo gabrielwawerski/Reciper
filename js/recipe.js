@@ -14,6 +14,7 @@ console.log(recipeDescription);
 
 for (let i = 0; i < ingredients.length; i++) {
     const LIST_ITEM = document.createElement('li');
+    LIST_ITEM.className = "dotted";
     LIST_ITEM.appendChild(document.createTextNode(ingredients[i]));
     INGREDIENTS_LIST.appendChild(LIST_ITEM);
 }
