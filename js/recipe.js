@@ -1,14 +1,14 @@
 const RECIPE_NAME = document.getElementById('recipe-name');
 const RECIPE_IMG = document.getElementById('recipe-img');
 const INGREDIENTS_LIST = document.getElementById('ingredients-table');
-const RECIPE_LIST = document.getElementById('recipe-description-data');
+const RECIPE_LIST = document.getElementById('recipe-instructions-data');
 
 RECIPE_NAME.innerText = localStorage.getItem("name");
 RECIPE_IMG.innerText = localStorage.getItem("img");
 
 
 let ingredients = localStorage.getItem("productList").split(",");
-let recipeDescription = localStorage.getItem("instructions").split("-");
+let recipeInstruction = localStorage.getItem("instructions").split("-");
 
 for (let i = 0; i < ingredients.length; i++) {
     const LIST_ITEM = document.createElement('li');
@@ -17,8 +17,8 @@ for (let i = 0; i < ingredients.length; i++) {
     INGREDIENTS_LIST.appendChild(LIST_ITEM);
 }
 
-for (let i = 0; i < recipeDescription.length; i++) {
+for (let i = 0; i < recipeInstruction.length; i++) {
     const LIST_ITEM = document.createElement('li');
-    LIST_ITEM.appendChild(document.createTextNode(recipeDescription[i]));
+    LIST_ITEM.appendChild(document.createTextNode(recipeInstruction[i]));
     RECIPE_LIST.appendChild(LIST_ITEM);
 }

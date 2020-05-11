@@ -1,11 +1,10 @@
 const REQUEST_URL = 'https://gabrielwawerski.github.io/Reciper/recipes.json';
+const RECIPE_CONTAINER = document.getElementById('recipe-container');
 let request = new XMLHttpRequest();
 
 request.open('GET', REQUEST_URL);
 request.responseType = 'json';
 request.send();
-
-const RECIPE_CONTAINER = document.getElementById('recipe-container');
 
 request.onload = function () {
     let json = request.response;
@@ -54,7 +53,7 @@ request.onload = function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
             localStorage.setItem("productList", recipes[i].productList);
-            localStorage.setItem("instructions", recipes[i].description);
+            localStorage.setItem("instructions", recipes[i].instructions);
 
             let recipeWindow = window.location.assign("../html/recipe.html");
         })
