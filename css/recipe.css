@@ -4,8 +4,10 @@
 }
 
 #recipe-header {
+    display: block;
     text-align: center;
     margin: 10px 0;
+    width: 100%;
 }
 
 #back-button-container {
@@ -18,11 +20,17 @@
     padding: 5px;
 }
 
+#recipe-info-container {
+    position: center;
+}
+
 #recipe-name {
     margin: 0;
 }
 
 #recipe-img {
+    width: 225px;
+    height: 225px;
     vertical-align: top;
 }
 

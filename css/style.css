@@ -35,6 +35,9 @@ a {
 .recipe-img {
     /*remove empty space under the image*/
     vertical-align: top;
+    width: 225px;
+    height: 225px;
+    background-color: white;
 }
 
 .recipe-info {
