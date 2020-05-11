@@ -8,7 +8,8 @@
         "mushrooms",
         "chicken"
       ],
-      "description": "Pokrój cebulę w kostkę i zacznij smażyć-Dodaj kurczaka-Po 3 min dodaj warzywa, ryż i przyprawy"
+      "description": "A lovely and easy to make meal, healthy too!",
+      "instructions": "Pokrój cebulę w kostkę i zacznij smażyć-Dodaj kurczaka-Po 3 min dodaj warzywa, ryż i przyprawy"
     },
     {
       "name": "Pasta salad with bacon",
@@ -17,7 +18,8 @@
         "product1",
         "product2"
       ],
-      "description": "pasta salad description"
+      "description": "Dobre kurwa gówno! Spróbuj a nie pożałujesz! Naprawdę, nie kłamię!",
+      "instructions": "pasta salad description"
     },
     {
       "name": "Spaghetti Carbonara",
@@ -29,7 +31,8 @@
         "parmesan cheese",
         "2 eggs"
       ],
-      "description": "carbonara description"
+      "description": "Lorem ipsum dolor sit amet",
+      "instructions": "carbonara description"
     }
   ]
 }

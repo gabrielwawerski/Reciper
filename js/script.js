@@ -64,7 +64,7 @@ request.onload = function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
             localStorage.setItem("productList", recipes[i].productList);
-            localStorage.setItem("description", recipes[i].description);
+            localStorage.setItem("instructions", recipes[i].description);
 
             let recipeWindow = window.location.assign("../html/recipe.html");
         })
