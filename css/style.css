@@ -61,6 +61,7 @@ a {
         text-align: center;
         max-width: unset;
         transition: unset;
+        width: 100%;
     }
 
     .img-container {

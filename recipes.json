@@ -2,6 +2,7 @@
   "recipes": [
     {
       "name": "Risotto with chicken, vegetables and mushrooms",
+      "img": "img/recipe.png",
       "productList": [
         "rice",
         "mushrooms",
@@ -11,6 +12,7 @@
     },
     {
       "name": "Pasta salad with bacon",
+      "img": "img/recipe.png",
       "productList": [
         "product1",
         "product2"
@@ -19,6 +21,7 @@
     },
     {
       "name": "Spaghetti Carbonara",
+      "img": "img/recipe.png",
       "productList": [
         "spaghetti pasta",
         "350g of bacon",
