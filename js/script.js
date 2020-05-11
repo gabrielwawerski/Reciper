@@ -5,10 +5,17 @@ request.open('GET', REQUEST_URL);
 request.responseType = 'json';
 request.send();
 
-const PRODUCT_LIST_TABLE = document.getElementById("product-list-table");
-const RECIPE_DESCRIPTION_DATA = document.getElementById("recipe-description-data");
+let htmlRequest = new XMLHttpRequest();
+htmlRequest.open('GET', "html/recipe.html", true);
+htmlRequest.send();
+
+// const RECIPE_PAGE = loadRecipePage();
+
 const RECIPE_CONTAINER = document.getElementById('recipe-container');
-const RECIPES = [];
+
+function loadRecipePage() {
+    return document.getElementById("content").innerHTML='<object type="text/html" data="../html/recipe.html" ></object>';
+}
 
 request.onload = function () {
     let json = request.response;
@@ -26,7 +33,7 @@ request.onload = function () {
 
         const RECIPE_IMG = document.createElement("img");
         RECIPE_IMG.className = "recipe-img";
-        RECIPE_IMG.src = "img/recipe.png";
+        RECIPE_IMG.src = recipes[i].img;
         RECIPE_IMG.alt = "asd";
 
         const RECIPE_INFO = document.createElement("div");
@@ -53,8 +60,13 @@ request.onload = function () {
         RECIPE.append(HYPERLINK);
         RECIPE_CONTAINER.appendChild(RECIPE);
 
-        RECIPES.push(RECIPE);
+        RECIPE.addEventListener('click', function () {
+            localStorage.setItem("name", recipes[i].name);
+            localStorage.setItem("img", recipes[i].img);
+            localStorage.setItem("productList", recipes[i].productList);
+            localStorage.setItem("description", recipes[i].description);
+
+            let recipeWindow = window.location.assign("../html/recipe.html");
+        })
     }
 };
-
-
