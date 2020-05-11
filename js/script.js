@@ -5,17 +5,7 @@ request.open('GET', REQUEST_URL);
 request.responseType = 'json';
 request.send();
 
-let htmlRequest = new XMLHttpRequest();
-htmlRequest.open('GET', "html/recipe.html", true);
-htmlRequest.send();
-
-// const RECIPE_PAGE = loadRecipePage();
-
 const RECIPE_CONTAINER = document.getElementById('recipe-container');
-
-function loadRecipePage() {
-    return document.getElementById("content").innerHTML='<object type="text/html" data="../html/recipe.html" ></object>';
-}
 
 request.onload = function () {
     let json = request.response;
