@@ -10,45 +10,51 @@ a {
 
 #shopping-list-menu-container {
     display: inline-block;
-    width: 100%;
-    /*z-index: 1;*/
+    width: 25em;
     position: fixed;
     bottom: 0;
+    right: 0;
     background-color: aqua;
+    cursor: pointer;
+}
+
+#shopping-list-menu-content {
 }
 
 #shopping-list-menu-text {
-    /*width: fit-content;*/
     float: left;
 }
 
-#shopping-list-show-button-container {
+#shopping-list-button-container {
     float: right;
-    vertical-align: middle;
     padding: 5px;
-    cursor: pointer;
     height: 100%;
+    cursor: pointer;
+    vertical-align: middle;
 }
 
-#shopping-list-show-button {
+#shopping-list-menu-container:hover ~ #shopping-list-content {
+    display: block;
+    overflow: visible;
+}
+
+#shopping-list-button {
     width: 28px;
     height: 28px;
     transform: rotate(90deg);
     vertical-align: middle;
 }
 
-.shopping-list-button {
-    border: none;
-    color: transparent;
-}
-
 #shopping-list-content {
     overflow: hidden;
-    height: 0;
+    display: none;
+    transition: all .5s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(1);
 }
 
 #shopping-list-content:target {
-    height: auto;
+    height: 50px;
 }
 
 .header {
@@ -107,6 +113,15 @@ a {
 }
 
 @media only screen and (max-width: 700px) {
+    #shopping-list-menu-container {
+        display: inline-block;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: aqua;
+    }
+
     #content {
         margin: 0;
     }
