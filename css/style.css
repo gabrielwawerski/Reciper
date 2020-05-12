@@ -1,5 +1,5 @@
 body {
-    margin: 20px;
+    margin: 0;
     background-color: darkgray;
 }
 
@@ -8,11 +8,55 @@ a {
     color: unset;
 }
 
+#shopping-list-menu-container {
+    display: inline-block;
+    width: 100%;
+    /*z-index: 1;*/
+    position: fixed;
+    bottom: 0;
+    background-color: aqua;
+}
+
+#shopping-list-menu-text {
+    /*width: fit-content;*/
+    float: left;
+}
+
+#shopping-list-show-button-container {
+    float: right;
+    vertical-align: middle;
+    padding: 5px;
+    cursor: pointer;
+    height: 100%;
+}
+
+#shopping-list-show-button {
+    width: 28px;
+    height: 28px;
+    transform: rotate(90deg);
+    vertical-align: middle;
+}
+
+.shopping-list-button {
+    border: none;
+    color: transparent;
+}
+
+#shopping-list-content {
+    overflow: hidden;
+    height: 0;
+}
+
+#shopping-list-content:target {
+    height: auto;
+}
+
 .header {
     text-align: center;
 }
 
 #content {
+    margin: 20px 100px 200px 100px;
 }
 
 #recipe-container {
@@ -60,6 +104,12 @@ a {
     text-align: justify;
     padding: 5px 8px;
     margin: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #content {
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width: 545px) {
