@@ -60,7 +60,7 @@ request.onload = function () {
     }
 };
 
-let SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-menu-container');
+let SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-menu-header');
 let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 
 SHOPPING_LIST_CONTAINER.addEventListener('click', function () {
