@@ -35,13 +35,13 @@ li {
     bottom: 0;
     right: 0;
     background-color: deepskyblue;
-    cursor: pointer;
 }
 
 #shopping-list-menu-header {
     display: block;
     height: 50px;
     padding: 0 10px;
+    cursor: pointer;
 }
 
 #shopping-list-menu-text {
@@ -53,14 +53,12 @@ li {
     float: right;
     padding: 5px;
     /*height: 100%;*/
-    cursor: pointer;
     vertical-align: middle;
 }
 
 #shopping-list-button {
     width: 28px;
     height: 28px;
-    transform: rotate(90deg);
     vertical-align: middle;
 }
 

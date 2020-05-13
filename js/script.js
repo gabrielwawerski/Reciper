@@ -39,11 +39,10 @@ request.onload = function () {
         RECIPE_DESCRIPTION.innerText = recipes[i].description;
 
         IMG_CONTAINER.appendChild(RECIPE_IMG);
-        HYPERLINK.appendChild(IMG_CONTAINER);
-
         RECIPE_INFO.appendChild(RECIPE_TITLE);
         RECIPE_INFO.appendChild(RECIPE_DESCRIPTION);
 
+        HYPERLINK.appendChild(IMG_CONTAINER);
         HYPERLINK.appendChild(RECIPE_INFO);
 
         RECIPE.append(HYPERLINK);
@@ -60,13 +59,17 @@ request.onload = function () {
     }
 };
 
-let SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-menu-header');
-let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-menu-header');
+const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+const SHOPPING_LIST_BUTTON = document.getElementById('shopping-list-button');
 
-SHOPPING_LIST_CONTAINER.addEventListener('click', function () {
+SHOPPING_LIST_HEADER.addEventListener('click', function () {
     if (SHOPPING_LIST_CONTENT.style.display === "") {
         SHOPPING_LIST_CONTENT.style.display = "block";
+        SHOPPING_LIST_BUTTON.style.transform = 'rotate(180deg)';
+        SHOPPING_LIST_BUTTON.style.transition = 'all .5s ease-in-out;';
     } else {
         SHOPPING_LIST_CONTENT.style.display = "";
+        SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
     }
 });
