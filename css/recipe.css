@@ -16,13 +16,12 @@ body {
 
 #back-button-container {
     float: left;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .back-button {
     width: 28px;
     height: 28px;
-    padding: 5px;
 }
 
 #recipe-info-container {
