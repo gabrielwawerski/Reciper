@@ -8,34 +8,53 @@ a {
     color: unset;
 }
 
+ol {
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 10px;
+}
+
+li {
+    margin: 0;
+    padding: 2px 0;
+    font-size: 18px;
+    list-style: none;
+}
+
+.dotted {
+    border-bottom: 1px dotted #bbb;
+}
+
 #shopping-list-menu-container {
-    display: inline-block;
+    display: block;
     width: 25em;
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: aqua;
+    background-color: deepskyblue;
     cursor: pointer;
 }
 
-#shopping-list-menu-content {
+#shopping-list-menu-header {
+    display: block;
+    height: 50px;
+    padding: 0 10px;
 }
 
 #shopping-list-menu-text {
     float: left;
+    font-size: 1.1em;
 }
 
 #shopping-list-button-container {
     float: right;
     padding: 5px;
-    height: 100%;
+    /*height: 100%;*/
     cursor: pointer;
     vertical-align: middle;
-}
-
-#shopping-list-menu-container:hover ~ #shopping-list-content {
-    display: block;
-    overflow: visible;
 }
 
 #shopping-list-button {
@@ -48,13 +67,13 @@ a {
 #shopping-list-content {
     overflow: hidden;
     display: none;
-    transition: all .5s ease-in-out;
-    transform-origin: left top;
-    transform: scaleY(1);
-}
-
-#shopping-list-content:target {
-    height: 50px;
+    float: left;
+    clear: left;
+    background-color: skyblue;
+    width: 100%;
+    /*transition: all .5s ease-in-out;*/
+    /*transform-origin: left top;*/
+    /*transform: scaleY(1);*/
 }
 
 .header {
@@ -119,7 +138,6 @@ a {
         position: fixed;
         bottom: 0;
         right: 0;
-        background-color: aqua;
     }
 
     #content {
