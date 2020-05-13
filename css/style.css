@@ -61,6 +61,7 @@ li {
     width: 28px;
     height: 28px;
     vertical-align: middle;
+    transition: all .3s ease-in-out;
 }
 
 #shopping-list-content {
@@ -70,7 +71,7 @@ li {
     clear: left;
     background-color: skyblue;
     width: 100%;
-    /*transition: all .5s ease-in-out;*/
+    transition: all .5s ease-in-out;
     transform-origin: left top;
     transform: scaleY(1);
 }

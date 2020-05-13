@@ -88,7 +88,6 @@ RECIPE_CHECKBOX.addEventListener('click', function () {
     if (RECIPE_CHECKBOX.checked === true) {
         SHOPPING_LIST.appendChild(SHOPPING_LIST_ENTRY);
     } else {
-
         SHOPPING_LIST.removeChild(SHOPPING_LIST.lastChild);
     }
 });
