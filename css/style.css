@@ -101,6 +101,7 @@ li {
 }
 
 .img-container {
+    display: inline-block;
 }
 
 .recipe-img {
@@ -109,6 +110,14 @@ li {
     width: 225px;
     height: 225px;
     background-color: white;
+}
+
+#add-to-list {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    padding: 5px;
+    transform: scale(2);
 }
 
 .recipe-info {
