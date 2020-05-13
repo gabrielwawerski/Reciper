@@ -35,6 +35,7 @@ li {
     bottom: 0;
     right: 0;
     background-color: deepskyblue;
+    transition: all .5s ease-in-out;
 }
 
 #shopping-list-menu-header {
@@ -70,8 +71,8 @@ li {
     background-color: skyblue;
     width: 100%;
     /*transition: all .5s ease-in-out;*/
-    /*transform-origin: left top;*/
-    /*transform: scaleY(1);*/
+    transform-origin: left top;
+    transform: scaleY(1);
 }
 
 .header {
@@ -102,6 +103,7 @@ li {
 
 .img-container {
     display: inline-block;
+    position: relative;
 }
 
 .recipe-img {
@@ -113,11 +115,13 @@ li {
 }
 
 #add-to-list {
+    display: inline;
+    float: right;
     position: absolute;
-    right: 3px;
-    top: 3px;
-    padding: 5px;
+    right: 0;
+    margin: 6px;
     transform: scale(2);
+    /*outline: 0.13em solid white;*/
 }
 
 .recipe-info {
@@ -166,6 +170,7 @@ li {
         border-color: white;
         margin: 0;
         padding: 0;
+        width: 99%;
     }
 
     .recipe:hover {

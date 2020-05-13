@@ -1,3 +1,4 @@
+// populates flex container with data from json
 const REQUEST_URL = 'https://gabrielwawerski.github.io/Reciper/recipes.json';
 const RECIPE_CONTAINER = document.getElementById('recipe-container');
 let request = new XMLHttpRequest();
@@ -59,8 +60,11 @@ request.onload = function () {
     }
 };
 
+
+// handles revealing product list
 const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-menu-header');
 const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+const SHOPPING_LIST = document.getElementById('shopping-list');
 const SHOPPING_LIST_BUTTON = document.getElementById('shopping-list-button');
 
 SHOPPING_LIST_HEADER.addEventListener('click', function () {
@@ -71,5 +75,20 @@ SHOPPING_LIST_HEADER.addEventListener('click', function () {
     } else {
         SHOPPING_LIST_CONTENT.style.display = "";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
+    }
+});
+
+
+const RECIPE_CHECKBOX = document.getElementById('add-to-list');
+
+RECIPE_CHECKBOX.addEventListener('click', function () {
+    const SHOPPING_LIST_ENTRY = document.createElement("li");
+    SHOPPING_LIST_ENTRY.appendChild(document.createTextNode("Worked!"));
+
+    if (RECIPE_CHECKBOX.checked === true) {
+        SHOPPING_LIST.appendChild(SHOPPING_LIST_ENTRY);
+    } else {
+
+        SHOPPING_LIST.removeChild(SHOPPING_LIST.lastChild);
     }
 });
