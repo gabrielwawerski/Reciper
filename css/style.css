@@ -6,6 +6,8 @@ body {
 a {
     text-decoration: none;
     color: unset;
+    display: block;
+    /*height: 100%;*/
 }
 
 ol {
@@ -94,7 +96,7 @@ li {
     margin: 10px;
     text-align: center;
     max-width: 225px;
-    height: 100%;
+    height: min-content;
     transition: all 0.5s;
 }
 
@@ -103,29 +105,38 @@ li {
 }
 
 .img-container {
-    display: inline-block;
+    display: block;
+    float: left;
+    width: 225px;
+    height: 225px;
     position: relative;
 }
 
 .recipe-img {
     /*remove empty space under the image*/
-    vertical-align: top;
+    vertical-align: bottom;
     width: 225px;
     height: 225px;
     background-color: white;
 }
 
-#add-to-list {
-    display: inline;
-    float: right;
+.recipe-link {
+}
+
+.checkbox {
+    /*float: right;*/
     position: absolute;
-    right: 0;
-    margin: 6px;
+    right: 3px;
+    top: 3px;
     transform: scale(2);
     /*outline: 0.13em solid white;*/
+    cursor: default;
 }
 
 .recipe-info {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
 }
 
 .recipe-title {

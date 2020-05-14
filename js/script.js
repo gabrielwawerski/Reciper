@@ -15,11 +15,18 @@ request.onload = function () {
         const RECIPE = document.createElement("div");
         RECIPE.className = "recipe";
 
-        const HYPERLINK = document.createElement("a");
-        HYPERLINK.href = "html/recipe.html";
-
         const IMG_CONTAINER = document.createElement("div");
         IMG_CONTAINER.className = "img-container";
+
+        const CHECKBOX = document.createElement("input");
+        CHECKBOX.type = "checkbox";
+        CHECKBOX.className = "checkbox";
+        CHECKBOX.name = "addToList";
+        // CHECKBOX.value = "on";
+
+        const HYPERLINK = document.createElement("a");
+        HYPERLINK.href = "html/recipe.html";
+        HYPERLINK.className = "recipe-link";
 
         const RECIPE_IMG = document.createElement("img");
         RECIPE_IMG.className = "recipe-img";
@@ -39,24 +46,25 @@ request.onload = function () {
         RECIPE_TITLE.innerText = recipes[i].name;
         RECIPE_DESCRIPTION.innerText = recipes[i].description;
 
-        IMG_CONTAINER.appendChild(RECIPE_IMG);
+        IMG_CONTAINER.appendChild(HYPERLINK);
+        HYPERLINK.appendChild(RECIPE_IMG);
+        IMG_CONTAINER.appendChild(CHECKBOX);
+
         RECIPE_INFO.appendChild(RECIPE_TITLE);
         RECIPE_INFO.appendChild(RECIPE_DESCRIPTION);
 
-        HYPERLINK.appendChild(IMG_CONTAINER);
-        HYPERLINK.appendChild(RECIPE_INFO);
-
-        RECIPE.append(HYPERLINK);
+        RECIPE.append(IMG_CONTAINER);
+        RECIPE.append(RECIPE_INFO);
         RECIPE_CONTAINER.appendChild(RECIPE);
 
-        RECIPE.addEventListener('click', function () {
+        [RECIPE_IMG, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
             localStorage.setItem("productList", recipes[i].productList);
             localStorage.setItem("instructions", recipes[i].instructions);
 
-            let recipeWindow = window.location.assign("../html/recipe.html");
-        })
+            window.location.assign("html/recipe.html");
+        }));
     }
 };
 
@@ -71,7 +79,6 @@ SHOPPING_LIST_HEADER.addEventListener('click', function () {
     if (SHOPPING_LIST_CONTENT.style.display === "") {
         SHOPPING_LIST_CONTENT.style.display = "block";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(180deg)';
-        SHOPPING_LIST_BUTTON.style.transition = 'all .5s ease-in-out;';
     } else {
         SHOPPING_LIST_CONTENT.style.display = "";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
@@ -79,15 +86,27 @@ SHOPPING_LIST_HEADER.addEventListener('click', function () {
 });
 
 
-const RECIPE_CHECKBOX = document.getElementById('add-to-list');
+let RECIPE_CHECKBOX = document.getElementsByClassName('checkbox');
 
-RECIPE_CHECKBOX.addEventListener('click', function () {
-    const SHOPPING_LIST_ENTRY = document.createElement("li");
-    SHOPPING_LIST_ENTRY.appendChild(document.createTextNode("Worked!"));
+for (let i = 0; i < RECIPE_CHECKBOX.length; i++) {
+    console.log(RECIPE_CHECKBOX.item(i));
+}
+console.log(Array.from(RECIPE_CHECKBOX));
 
-    if (RECIPE_CHECKBOX.checked === true) {
-        SHOPPING_LIST.appendChild(SHOPPING_LIST_ENTRY);
-    } else {
-        SHOPPING_LIST.removeChild(SHOPPING_LIST.lastChild);
-    }
-});
+
+// RECIPE_CHECKBOX.addEventListener('click', function () {
+//     const SHOPPING_LIST_ENTRY = document.createElement("li");
+//     SHOPPING_LIST_ENTRY.appendChild(document.createTextNode("Worked!"));
+//     // let test = event.target.parentNode.parentNode.parentNode;
+//     console.log(localStorage.getItem("name"));
+//
+//     // for (let i = 0; i < asd; i++) {
+//     //
+//     // }
+//
+//     if (RECIPE_CHECKBOX.checked === true) {
+//         SHOPPING_LIST.appendChild(SHOPPING_LIST_ENTRY);
+//     } else {
+//         SHOPPING_LIST.removeChild(SHOPPING_LIST.lastChild);
+//     }
+// });
