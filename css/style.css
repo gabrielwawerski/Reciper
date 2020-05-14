@@ -1,10 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: darkgray;
     overflow-x: hidden;
     font-family: 'Hind Siliguri', sans-serif;
     box-sizing: border-box;
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 a {
@@ -31,7 +32,7 @@ li {
 }
 
 .dotted {
-    border-bottom: 1px dotted white;
+    border-bottom: 3px dotted white;
 }
 
 #shopping-list-menu-container {
@@ -44,10 +45,8 @@ li {
     right: 0;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    /*border: solid 1px dimgrey;*/
     margin: 0;
-    /*background-color: deepskyblue;*/
-    transition: all .5s ease-in-out;
+    transition: all .4s ease-in-out;
     height: 50px;
     /*transform-origin: left top;*/
     /*transform: scaleY(1);*/
