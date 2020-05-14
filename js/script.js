@@ -7,6 +7,8 @@ request.open('GET', REQUEST_URL);
 request.responseType = 'json';
 request.send();
 
+// klasa recipe - dane z jsona + dom element checkbox w niej
+
 request.onload = function () {
     let json = request.response;
     let recipes = json.recipes;
