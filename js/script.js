@@ -70,7 +70,7 @@ request.onload = function () {
     }
 };
 
-
+// ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
 // handles revealing product list
 const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-menu-header');
 const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
