@@ -9,9 +9,31 @@ request.send();
 
 // klasa recipe - dane z jsona + dom element checkbox w niej
 
+class Recipe {
+    constructor(name, img, productList, description, instructions, checkbox) {
+        this.name = name;
+        this.img = img;
+        this.productList = productList;
+        this.description = description;
+        this.instructions = instructions;
+        this.checkbox = checkbox;
+    }
+}
+Element.prototype.remove = function() {
+    this.parentElement.removeChild(this);
+};
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+    for(var i = this.length - 1; i >= 0; i--) {
+        if(this[i] && this[i].parentElement) {
+            this[i].parentElement.removeChild(this[i]);
+        }
+    }
+}
+
 request.onload = function () {
     let json = request.response;
     let recipes = json.recipes;
+    let recipeArray = [];
 
     for (let i = 0; i < recipes.length; i++) {
         const RECIPE = document.createElement("div");
@@ -59,6 +81,16 @@ request.onload = function () {
         RECIPE.append(RECIPE_INFO);
         RECIPE_CONTAINER.appendChild(RECIPE);
 
+        let recipe = new Recipe(
+            recipes[i].name,
+            recipes[i].img,
+            recipes[i].productList,
+            recipes[i].description,
+            recipes[i].instructions,
+            CHECKBOX);
+
+        recipeArray.push(recipe);
+
         [RECIPE_IMG, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
@@ -68,7 +100,34 @@ request.onload = function () {
             window.location.assign("html/recipe.html");
         }));
     }
+
+
+    // handle adding and removing list items
+    for (let i = 0; i < recipeArray.length; i++) {
+        recipeArray[i].checkbox.addEventListener('click', function () {
+            let products = recipeArray[i].productList;
+
+            if (recipeArray[i].checkbox.checked === true) {
+                for (let j = 0; j < products.length; j++) {
+                    let listItem = document.createElement("li");
+                    listItem.className = `dotted ${i.toString()}`;
+                    listItem.appendChild(document.createTextNode(products[j]));
+                    SHOPPING_LIST.append(listItem);
+                }
+            } else {
+                document.getElementsByClassName(i.toString()).remove();
+                // let listItems = SHOPPING_LIST.getElementsByTagName("li");
+                //
+                // for (let x = 0; i < listItems.length; x++) {
+                //     if (listItems[x].id === i.toString()) {
+                //        listItems[x].parentNode.removeChild(listItems[x]);
+                //     }
+                // }
+            }
+        })
+    }
 };
+
 
 // ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
 // handles revealing product list
@@ -86,29 +145,3 @@ SHOPPING_LIST_HEADER.addEventListener('click', function () {
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
     }
 });
-
-
-let RECIPE_CHECKBOX = document.getElementsByClassName('checkbox');
-
-for (let i = 0; i < RECIPE_CHECKBOX.length; i++) {
-    console.log(RECIPE_CHECKBOX.item(i));
-}
-console.log(Array.from(RECIPE_CHECKBOX));
-
-
-// RECIPE_CHECKBOX.addEventListener('click', function () {
-//     const SHOPPING_LIST_ENTRY = document.createElement("li");
-//     SHOPPING_LIST_ENTRY.appendChild(document.createTextNode("Worked!"));
-//     // let test = event.target.parentNode.parentNode.parentNode;
-//     console.log(localStorage.getItem("name"));
-//
-//     // for (let i = 0; i < asd; i++) {
-//     //
-//     // }
-//
-//     if (RECIPE_CHECKBOX.checked === true) {
-//         SHOPPING_LIST.appendChild(SHOPPING_LIST_ENTRY);
-//     } else {
-//         SHOPPING_LIST.removeChild(SHOPPING_LIST.lastChild);
-//     }
-// });

@@ -38,6 +38,8 @@ li {
     right: 0;
     background-color: deepskyblue;
     transition: all .5s ease-in-out;
+    max-height: 400px;
+    overflow: auto;
 }
 
 #shopping-list-menu-header {
