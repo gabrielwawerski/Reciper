@@ -2,7 +2,7 @@
   "recipes": [
     {
       "name": "Risotto with chicken, vegetables and mushrooms",
-      "img": "img/risotto.jpg",
+      "img": "risotto.jpg",
       "productList": [
         "rice",
         "mushrooms",
@@ -13,7 +13,7 @@
     },
     {
       "name": "Pasta salad with bacon",
-      "img": "img/recipe.png",
+      "img": "pasta-salad.jpg",
       "productList": [
         "product1",
         "product2"
@@ -23,7 +23,7 @@
     },
     {
       "name": "Spaghetti Carbonara",
-      "img": "img/recipe.png",
+      "img": "spaghetti-carbonara.jpg",
       "productList": [
         "spaghetti pasta",
         "350g of bacon",
@@ -36,7 +36,7 @@
     },
     {
       "name": "Recipe4",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Recipe5",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Recipe6",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -75,7 +75,7 @@
     },
     {
       "name": "Recipe7",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -88,7 +88,7 @@
     },
     {
       "name": "Recipe8",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -101,7 +101,7 @@
     },
     {
       "name": "Recipe9",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Recipe10",
-      "img": "img/recipe.png",
+      "img": "recipe.png",
       "productList": [
         "product1",
         "product2",
