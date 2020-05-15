@@ -144,7 +144,7 @@ SHOPPING_LIST_HEADER.addEventListener('click', function () {
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(180deg)';
     } else {
         SHOPPING_LIST_CONTENT.style.display = "";
-        SHOPPING_LIST_CONTAINER.style.height = "55px";
+        SHOPPING_LIST_CONTAINER.style.height = "50px";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
     }
 });
