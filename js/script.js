@@ -131,8 +131,8 @@ request.onload = function () {
 
 // ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
 // handles revealing product list
-const SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-menu-container');
-const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-menu-header');
+const SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-container');
+const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-header');
 const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 const SHOPPING_LIST = document.getElementById('shopping-list');
 const SHOPPING_LIST_BUTTON = document.getElementById('shopping-list-button');
@@ -140,9 +140,13 @@ const SHOPPING_LIST_BUTTON = document.getElementById('shopping-list-button');
 SHOPPING_LIST_HEADER.addEventListener('click', function () {
     if (SHOPPING_LIST_CONTENT.style.display === "") {
         SHOPPING_LIST_CONTENT.style.display = "block";
-        SHOPPING_LIST_CONTAINER.style.height = "250px";
+        SHOPPING_LIST_CONTAINER.style.height = "400px";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(180deg)';
     } else {
+        let animationDuration = 1000;
+        setTimeout(function(){
+            // Animation done!
+        }, animationDuration);
         SHOPPING_LIST_CONTENT.style.display = "";
         SHOPPING_LIST_CONTAINER.style.height = "50px";
         SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
