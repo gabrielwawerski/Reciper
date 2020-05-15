@@ -32,13 +32,33 @@ li {
 }
 
 .dotted {
-    border-bottom: 3px dotted white;
+    border-bottom: 1px dotted white;
+}
+
+/* width */
+#shopping-list-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+#shopping-list-content::-webkit-scrollbar-track {
+    background: #f16500;
+}
+
+/* Handle */
+#shopping-list-content::-webkit-scrollbar-thumb {
+    background: #e35f00;
+}
+
+/* Handle on hover */
+#shopping-list-content::-webkit-scrollbar-thumb:hover {
+    background: #d85f08;
 }
 
 #shopping-list-menu-container {
     display: block;
+    /*background-color: #DDCECE;*/
     background-color: #ff6b00;
-    /*background-color: #21e000;*/
     width: 25em;
     position: fixed;
     bottom: 0;
@@ -59,6 +79,7 @@ li {
     height: 50px;
     padding: 0 10px;
     cursor: pointer;
+    /*background-color: #E80303;*/
     background-color: #f16500;
     /*background-color: #32ce00;*/
     color: white;
@@ -74,7 +95,6 @@ li {
 #shopping-list-button-container {
     float: right;
     padding: 11px 2px;
-    /*height: 100%;*/
     vertical-align: middle;
 }
 
@@ -88,13 +108,12 @@ li {
 
 #shopping-list-content {
     display: none;
-    /*margin-bottom: 15px;*/
     float: left;
     clear: left;
     width: 100%;
-    max-height: 300px;
+    max-height: 185px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 #shopping-list {
