@@ -23,15 +23,45 @@
         </div>
 
         <script>
-            let media = window.matchMedia("(max-width: 800px)");
+            function reportWindowSize() {
+                let x = document.documentElement.clientWidth;
 
-            // TODO animate transition
+                console.log(x);
+                if (x < 724) {
+                    if (document.getElementById("shopping-list-sidenav").style.width === "280px") {
+                        document.getElementById("shopping-list-sidenav").style.width = "100%"
+                    }
+                } else {
+                    if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
+                        document.getElementById("shopping-list-sidenav").style.width = "280px"
+                    }
+                }
+            }
+
+            window.addEventListener('resize', reportWindowSize);
+
+            let media = window.matchMedia("(max-width: 735px)");
+            window.addEventListener('orientationchange', function () {
+                if (document.getElementById("shopping-list-sidenav").style.width === "0") {
+
+                } else if (document.getElementById("shopping-list-sidenav").style.width === "280px") {
+                    document.getElementById("shopping-list-sidenav").style.width = "100%"
+                } else if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
+                    document.getElementById("shopping-list-sidenav").style.width = "280px"
+                }
+            });
+
             function openNav() {
-                document.getElementById("shopping-list-sidenav").style.display = "flex";
+                if (media.matches) {
+                    document.getElementById("shopping-list-sidenav").style.width = "100%";
+                } else {
+                    document.getElementById("shopping-list-sidenav").style.width = "280px";
+                }
+
             }
 
             function closeNav() {
-                document.getElementById("shopping-list-sidenav").style.display = "";
+                document.getElementById("shopping-list-sidenav").style.width = "0";
             }
         </script>
 
