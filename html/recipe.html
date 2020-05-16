@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/recipe.css">
-    <link rel="stylesheet" type="text/css" href="../css/shopping_list.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/sidenav_shoppinglist.css"/>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Title</title>
@@ -17,6 +18,37 @@
                         </a>
         </div>
         <h1 id="recipe-name"></h1>
+        <div class="header-sidenav-button-container">
+            <img id="header-sidenav-button" src="../img/hamburger.png" onclick="openNav()">
+        </div>
+
+        <script>
+            let media = window.matchMedia("(max-width: 800px)");
+
+            // TODO animate transition
+            function openNav() {
+                document.getElementById("shopping-list-sidenav").style.display = "flex";
+            }
+
+            function closeNav() {
+                document.getElementById("shopping-list-sidenav").style.display = "";
+            }
+        </script>
+
+    </div>
+    <div id="shopping-list-sidenav">
+        <div id="shopping-list-header">
+            <p id="shopping-list-header-text">Shopping List</p>
+            <div id="shopping-list-header-button-container">
+                <img id="shopping-list-header-button-close" src="../img/close.png" alt="Show shopping list" onclick="closeNav()">
+            </div>
+        </div>
+
+        <div class="shopping-list-content">
+            <div class="shopping-list-content-entry">
+                <p class="shopping-list-content-text">product</p>
+            </div>
+        </div>
     </div>
 
     <div id="recipe-content">
