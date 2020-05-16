@@ -118,31 +118,17 @@ request.onload = function () {
             }
         })
     }
+
+    function openNav() {
+        document.getElementById("shopping-list-sidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("shopping-list-sidenav").style.width = "0";
+    }
 };
 
 
 // TODO ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
 // TODO MOZLIWOSC ROZWINIECIA LISTY NA CALY EKRAN NA MOBILE
 // TODO MOZLIWOSC DODAWANIA WLASNYCH POZYCJI DO SHOPPING LISTY - INPUT FIELD NA DOLE Z PLUSIKIEM PO PRAWEJ
-// handles revealing product list
-const SHOPPING_LIST_CONTAINER = document.getElementById('shopping-list-container');
-const SHOPPING_LIST_HEADER = document.getElementById('shopping-list-header');
-const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
-const SHOPPING_LIST = document.getElementById('shopping-list');
-const SHOPPING_LIST_BUTTON = document.getElementById('shopping-list-button');
-
-SHOPPING_LIST_HEADER.addEventListener('click', function () {
-    if (SHOPPING_LIST_CONTENT.style.display === "") {
-        SHOPPING_LIST_CONTENT.style.display = "block";
-        SHOPPING_LIST_CONTAINER.style.height = "400px";
-        SHOPPING_LIST_BUTTON.style.transform = 'rotate(180deg)';
-    } else {
-        let animationDuration = 1000;
-        setTimeout(function(){
-            // Animation done!
-        }, animationDuration);
-        SHOPPING_LIST_CONTENT.style.display = "";
-        SHOPPING_LIST_CONTAINER.style.height = "50px";
-        SHOPPING_LIST_BUTTON.style.transform = 'rotate(0deg)';
-    }
-});

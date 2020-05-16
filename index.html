@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/sidenav_shoppinglist.css"/>
     <meta charset="UTF-8">
     <title>Reciper</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -18,44 +19,62 @@
             <a href="index.html">
                 <h1 class="header-title-h1">Reciper</h1></a>
         </div>
-        <!--        <div class="header-description">-->
-        <!--            <h4>Your recipes in one place.</h4>-->
-        <!--        </div>-->
+        <div class="header-sidenav-button-container">
+            <img id="header-sidenav-button" src="img/hamburger.png" onclick="openNav()">
+        </div>
 
+        <script>
+            const SHOPPING_LIST_SIDENAV = document.getElementById("shopping-list-sidenav");
+            let mq = window.matchMedia( "(max-width: 800px)" );
+
+            function openNav() {
+                if (mq.matches) {
+                    document.getElementById("shopping-list-sidenav").style.width = "100%";
+                } else {
+                    document.getElementById("shopping-list-sidenav").style.width = "250px";
+                }
+            }
+
+            function closeNav() {
+                document.getElementById("shopping-list-sidenav").style.width = "0";
+            }
+        </script>
     </div>
+
+    <div id="shopping-list-sidenav">
+        <div id="shopping-list-header1">
+            <p id="shopping-list-header-text1">Shopping List</p>
+            <div id="shopping-list-header-button-container">
+                <img id="shopping-list-header-button" src="img/close.png" alt="Show shopping list" onclick="closeNav()">
+            </div>
+        </div>
+
+        <div class="shopping-list-content">
+            <div class="shopping-list-content-entry">
+                <p class="shopping-list-content-text">product</p>
+            </div>
+        </div>
+    </div>
+
+
     <div id="recipe-container">
-<!--                <div class="recipe">-->
-<!--                    <div class="img-container">-->
-<!--                        <a href="html/recipe.html" class="recipe-link">-->
-<!--                            <img class="recipe-img" src="img/spaghetti-carbonara.jpg" alt="asd">-->
-<!--                        </a>-->
-<!--                        <input type="checkbox" class="checkbox" name="addToList" value="on">-->
-<!--                    </div>-->
-<!--                    <div class="recipe-info">-->
-<!--                        <p class="recipe-title">Static recipe</p>-->
-<!--                        <p class="recipe-description">-->
-<!--                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--                            Aliquam esse fugit maiores nesciunt quis vero, vitae voluptas.-->
-<!--                            Alias cumque dicta doloribus facere illo impedit, magni numquam optio repellat rerum, ut!</p>-->
-<!--                    </div>-->
+        <!--                <div class="recipe">-->
+        <!--                    <div class="img-container">-->
+        <!--                            <img class="recipe-img" src="img/spaghetti-carbonara.jpg" alt="asd">-->
+        <!--                        <input type="checkbox" class="checkbox" name="addToList" value="on">-->
+        <!--                    </div>-->
+        <!--                    <div class="recipe-info">-->
+        <!--                        <p class="recipe-title">Static recipe</p>-->
+        <!--                        <p class="recipe-description">-->
+        <!--                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+        <!--                            Aliquam esse fugit maiores nesciunt quis vero, vitae voluptas.-->
+        <!--                            Alias cumque dicta doloribus facere illo impedit, magni numquam optio repellat rerum, ut!</p>-->
+        <!--                    </div>-->
 
-<!--                </div>-->
+        <!--                </div>-->
     </div>
 </div>
-<div id="shopping-list-container">
-    <div id="shopping-list-header">
-        <div id="shopping-list-menu-text">
-            <p>Shopping List</p>
-        </div>
-        <div id="shopping-list-button-container">
-            <img id="shopping-list-button" src="img/show-list.png" alt="Show shopping list">
-        </div>
-    </div>
-    <div id="shopping-list-content">
-        <ul id="shopping-list">
-        </ul>
-    </div>
-</div>
+
 
 <!--<p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a-->
 <!--        href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>-->

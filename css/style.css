@@ -65,10 +65,22 @@ h1 {
     background-color: #f16500;
 }
 
+.header-sidenav-button-container {
+    float: right;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#header-sidenav-button {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+}
+
 #content {
     font-family: 'Fanwood Text', serif;
-    /*height: 100%;*/
-    /*margin-top: 120px;*/
     padding-top: 50px;
 }
 
@@ -109,24 +121,22 @@ h1 {
 .recipe-img {
     /*remove empty space under the image*/
     vertical-align: bottom;
+    object-fit: cover;
     /*height: auto;*/
     /*max-width: 100%;*/
-    width: 200px;
+    width: 400px;
 }
 
-/*background: url("../img/background.jpg") no-repeat center center fixed;*/
 .recipe-link {
 }
 
 .checkbox {
-    /*float: right;*/
     position: absolute;
     right: 3px;
     top: 3px;
     transform: scale(2);
     /*outline: 0.13em solid white;*/
     cursor: default;
-    z-index: 1;
     width: 12px;
     height: 12px;
 }
@@ -135,9 +145,6 @@ h1 {
     display: inline-block;
     width: 100%;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.75);
-    /*backdrop-filter: blur(2px);*/
-    /*background-color: #ff6b00;*/
 }
 
 .recipe-title {
@@ -153,7 +160,6 @@ p.recipe-title {
 }
 
 .recipe-description {
-    /*background-color: #ff6b00;*/
     color: black;
     font-size: 19px;
     text-align: center;
@@ -183,7 +189,17 @@ p.recipe-title {
         width: 100%;
     }
 
+    .recipe-img {
+        width: 100%;
+    }
+
     .img-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .img-wrapper {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -192,4 +208,13 @@ p.recipe-title {
     .recipe:hover {
         transform: unset;
     }
+
+    .header-sidenav-button-container {
+        float: right;
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        cursor: pointer;
+    }
 }
+

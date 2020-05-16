@@ -1,0 +1,31 @@
+#shopping-list-sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #f16500;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 0;
+}
+
+#shopping-list-header-text1 {
+    float: left;
+}
+
+#shopping-list-header-button-container {
+    float: right;
+    padding: 13px 15px;
+}
+
+#shopping-list-header-button {
+    width: 32px;
+    height: 32px;
+    filter: invert(100%);
+
+}
+
