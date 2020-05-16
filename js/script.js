@@ -118,14 +118,6 @@ request.onload = function () {
             }
         })
     }
-
-    function openNav() {
-        document.getElementById("shopping-list-sidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("shopping-list-sidenav").style.width = "0";
-    }
 };
 
 
