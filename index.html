@@ -33,24 +33,14 @@
             function closeNav() {
                 document.getElementById("shopping-list-sidenav").style.display = "";
             }
-
-            // window.addEventListener("orientationchange", function () {
-            //     if (document.getElementById("shopping-list-sidenav").style.display === "") {
-            //         console.log("returning!")
-            //     } else if (document.getElementById("shopping-list-sidenav").style.width === "250px") {
-            //         document.getElementById("shopping-list-sidenav").style.width = "100%"
-            //     } else if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
-            //         document.getElementById("shopping-list-sidenav").style.width = "250px"
-            //     }
-            // });
         </script>
     </div>
 
     <div id="shopping-list-sidenav">
-        <div id="shopping-list-header1">
-            <p id="shopping-list-header-text1">Shopping List</p>
+        <div id="shopping-list-header">
+            <p id="shopping-list-header-text">Shopping List</p>
             <div id="shopping-list-header-button-container">
-                <img id="shopping-list-header-button" src="img/close.png" alt="Show shopping list" onclick="closeNav()">
+                <img id="shopping-list-header-button-close" src="img/close.png" alt="Show shopping list" onclick="closeNav()">
             </div>
         </div>
 

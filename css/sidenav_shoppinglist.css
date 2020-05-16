@@ -2,7 +2,7 @@
     display: none;
     flex-direction: column;
     height: 100%;
-    width: 250px;
+    width: 280px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -13,20 +13,22 @@
     padding: 0;
 }
 
-#shopping-list-header-text1 {
+#shopping-list-header-text {
     float: left;
 }
 
 #shopping-list-header-button-container {
     float: right;
-    padding: 13px 15px;
+    padding: 10px 5px;
+    height: 100%;
 }
 
-#shopping-list-header-button {
+#shopping-list-header-button-close {
     width: 32px;
     height: 32px;
     filter: invert(100%);
-
+    /*margin: 3px 5px 0 5px;*/
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
