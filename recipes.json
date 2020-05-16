@@ -36,7 +36,7 @@
     },
     {
       "name": "Recipe4",
-      "img": "recipe.png",
+      "img": "pasta-salad.jpg",
       "productList": [
         "product1",
         "product2",
@@ -49,7 +49,7 @@
     },
     {
       "name": "Recipe5",
-      "img": "recipe.png",
+      "img": "risotto.jpg",
       "productList": [
         "product1",
         "product2",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Recipe6",
-      "img": "recipe.png",
+      "img": "spaghetti-carbonara.jpg",
       "productList": [
         "product1",
         "product2",
@@ -75,7 +75,7 @@
     },
     {
       "name": "Recipe7",
-      "img": "recipe.png",
+      "img": "risotto.jpg",
       "productList": [
         "product1",
         "product2",
@@ -88,7 +88,7 @@
     },
     {
       "name": "Recipe8",
-      "img": "recipe.png",
+      "img": "pasta-salad.jpg",
       "productList": [
         "product1",
         "product2",
@@ -101,7 +101,7 @@
     },
     {
       "name": "Recipe9",
-      "img": "recipe.png",
+      "img": "risotto.jpg",
       "productList": [
         "product1",
         "product2",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Recipe10",
-      "img": "recipe.png",
+      "img": "spaghetti-carbonara.jpg",
       "productList": [
         "product1",
         "product2",
