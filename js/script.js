@@ -94,27 +94,58 @@ request.onload = function () {
     }
 
 
+    const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+
+    function createListEntry(productName, id) {
+        const STRIKE_THROUGH = document.createElement("div");
+        STRIKE_THROUGH.className = "strike-through";
+
+        const SHOPPING_LIST_ENTRY_TEXT = document.createElement("p");
+        SHOPPING_LIST_ENTRY_TEXT.className = "shopping-list-entry-text";
+        SHOPPING_LIST_ENTRY_TEXT.innerText = productName;
+
+        const SHOPPING_LIST_ENTRY_CHECKBOX_CONTAINER = document.createElement("div");
+        SHOPPING_LIST_ENTRY_CHECKBOX_CONTAINER.className = "shopping-list-entry-checkbox-container";
+
+        const CHECKBOX = document.createElement("input");
+        CHECKBOX.type = "checkbox";
+        CHECKBOX.className = "shopping-list-entry-checkbox";
+        CHECKBOX.name = "checkProduct";
+
+        const SHOPPING_LIST_ENTRY = document.createElement("div");
+        SHOPPING_LIST_ENTRY.className = `shopping-list-entry ${id}`;
+
+        SHOPPING_LIST_ENTRY.appendChild(STRIKE_THROUGH);
+        SHOPPING_LIST_ENTRY.appendChild(SHOPPING_LIST_ENTRY_TEXT);
+
+        SHOPPING_LIST_ENTRY_CHECKBOX_CONTAINER.appendChild(CHECKBOX);
+
+        SHOPPING_LIST_ENTRY.appendChild(SHOPPING_LIST_ENTRY_CHECKBOX_CONTAINER);
+
+        CHECKBOX.addEventListener('click', function () {
+            if (CHECKBOX.checked === true) {
+                STRIKE_THROUGH.style.width = "80%";
+            } else {
+                STRIKE_THROUGH.style.width = "0";
+            }
+        });
+
+        return SHOPPING_LIST_ENTRY;
+    }
+
     // handle adding and removing list items
     for (let i = 0; i < recipeArray.length; i++) {
         recipeArray[i].checkbox.addEventListener('click', function () {
+            console.log("clicked!");
             let products = recipeArray[i].productList;
 
             if (recipeArray[i].checkbox.checked === true) {
                 for (let j = 0; j < products.length; j++) {
-                    let listItem = document.createElement("li");
-                    listItem.className = `dotted ${i.toString()}`;
-                    listItem.appendChild(document.createTextNode(products[j]));
-                    SHOPPING_LIST.append(listItem);
+                    console.log("tried adding!");
+                    SHOPPING_LIST_CONTENT.append(createListEntry(products[j], i.toString()));
                 }
             } else {
                 document.getElementsByClassName(i.toString()).remove();
-                // let listItems = SHOPPING_LIST.getElementsByTagName("li");
-                //
-                // for (let x = 0; i < listItems.length; x++) {
-                //     if (listItems[x].id === i.toString()) {
-                //        listItems[x].parentNode.removeChild(listItems[x]);
-                //     }
-                // }
             }
         })
     }
