@@ -10,25 +10,36 @@
     background-color: #f16500;
     overflow-x: hidden;
     transition: 0.5s;
-    padding: 0;
+    padding: 0;cursor: default;
+}
+
+#shopping-list-header {
+    cursor: default;
+    width: fit-content;
 }
 
 #shopping-list-header-text {
-    float: left;
+    float: left;cursor: default;
+    size: 24px;
 }
 
 #shopping-list-header-button-container {
-    float: right;
-    padding: 10px 5px;
-    height: 100%;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    /*padding: 10px 5px;*/
+    cursor: pointer;
 }
 
 #shopping-list-header-button-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
     width: 32px;
     height: 32px;
     filter: invert(100%);
     /*margin: 3px 5px 0 5px;*/
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 @media only screen and (max-width: 800px) {
