@@ -124,7 +124,7 @@ request.onload = function () {
 
         CHECKBOX.addEventListener('click', function () {
             if (CHECKBOX.checked === true) {
-                STRIKE_THROUGH.style.width = "80%";
+                STRIKE_THROUGH.style.width = "92%";
             } else {
                 STRIKE_THROUGH.style.width = "0";
             }
