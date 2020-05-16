@@ -25,10 +25,10 @@
 
         <script>
             const SHOPPING_LIST_SIDENAV = document.getElementById("shopping-list-sidenav");
-            let mq = window.matchMedia( "(max-width: 800px)" );
+            let media = window.matchMedia("(max-width: 800px)");
 
             function openNav() {
-                if (mq.matches) {
+                if (media.matches) {
                     document.getElementById("shopping-list-sidenav").style.width = "100%";
                 } else {
                     document.getElementById("shopping-list-sidenav").style.width = "250px";
@@ -38,14 +38,17 @@
             function closeNav() {
                 document.getElementById("shopping-list-sidenav").style.width = "0";
             }
-            
-            window.onorientationchange = function() {
-                if (document.getElementById("shopping-list-sidenav").style.width === "250px") {
+
+            window.addEventListener("orientationchange", function() {
+                if (document.getElementById("shopping-list-sidenav").style.width === "0") {
+                    console.log("returning!")
+                }
+                else if (document.getElementById("shopping-list-sidenav").style.width === "250px") {
                     document.getElementById("shopping-list-sidenav").style.width = "100%"
-                } else {
+                } else if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
                     document.getElementById("shopping-list-sidenav").style.width = "250px"
                 }
-            }
+            });
         </script>
     </div>
 
