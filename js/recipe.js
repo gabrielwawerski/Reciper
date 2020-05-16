@@ -4,7 +4,7 @@ const INGREDIENTS_LIST = document.getElementById('ingredients-table');
 const RECIPE_LIST = document.getElementById('recipe-instructions-data');
 
 RECIPE_NAME.innerText = localStorage.getItem("name");
-RECIPE_IMG.innerText = localStorage.getItem("img");
+RECIPE_IMG.style.backgroundImage = `url(\"../img/${localStorage.getItem("img")}\")`;
 
 
 let ingredients = localStorage.getItem("productList").split(",");
