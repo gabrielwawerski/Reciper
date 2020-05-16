@@ -23,12 +23,12 @@ Element.prototype.remove = function() {
     this.parentElement.removeChild(this);
 };
 NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
+    for(let i = this.length - 1; i >= 0; i--) {
         if(this[i] && this[i].parentElement) {
             this[i].parentElement.removeChild(this[i]);
         }
     }
-}
+};
 
 request.onload = function () {
     let json = request.response;
@@ -46,17 +46,6 @@ request.onload = function () {
         CHECKBOX.type = "checkbox";
         CHECKBOX.className = "checkbox";
         CHECKBOX.name = "addToList";
-        // CHECKBOX.value = "on";
-
-        const EMPTY_DIV = document.createElement("div");
-        EMPTY_DIV.className = "";
-
-        const HYPERLINK = document.createElement("a");
-        HYPERLINK.href = "html/recipe.html";
-        HYPERLINK.className = "recipe-link";
-
-        console.log(recipes[i].img);
-        IMG_CONTAINER.style.backgroundImage = `url(\"img/${recipes[i].img}\")`;
 
         const RECIPE_INFO = document.createElement("div");
         RECIPE_INFO.className = "recipe-info";
@@ -67,17 +56,20 @@ request.onload = function () {
         const RECIPE_DESCRIPTION = document.createElement("p");
         RECIPE_DESCRIPTION.className = "recipe-description";
 
+        const IMG_WRAPPER = document.createElement("div");
+        IMG_WRAPPER.className = "img-wrapper";
+        IMG_WRAPPER.style.backgroundImage = `url(\"img/${recipes[i].img}\")`;
 
         RECIPE_TITLE.innerText = recipes[i].name;
         RECIPE_DESCRIPTION.innerText = recipes[i].description;
 
-        IMG_CONTAINER.appendChild(HYPERLINK);
-        IMG_CONTAINER.appendChild(CHECKBOX);
+        IMG_WRAPPER.appendChild(IMG_CONTAINER);
+        IMG_WRAPPER.appendChild(CHECKBOX);
 
         RECIPE_INFO.appendChild(RECIPE_TITLE);
         RECIPE_INFO.appendChild(RECIPE_DESCRIPTION);
 
-        RECIPE.append(IMG_CONTAINER);
+        RECIPE.append(IMG_WRAPPER);
         RECIPE.append(RECIPE_INFO);
         RECIPE_CONTAINER.appendChild(RECIPE);
 
