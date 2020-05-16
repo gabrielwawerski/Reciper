@@ -107,9 +107,9 @@ h1 {
 
 .recipe {
     display: block;
-    margin: 0 5px 5px 5px;
+    margin: 0 5px 2px 5px;
     text-align: center;
-    max-width: 400px;
+    max-width: 350px;
     height: min-content;
     background-color: rgba(255, 255, 255, 0);
 }
@@ -117,7 +117,7 @@ h1 {
 .img-wrapper {
     display: block;
     float: left;
-    width: 400px;
+    width: 350px;
     height: 225px;
     position: relative;
     background: no-repeat center center;
@@ -125,7 +125,7 @@ h1 {
 }
 
 .img-container {
-    width: 400px;
+    width: 350px;
     height: 225px;
     cursor: pointer;
 }
@@ -179,11 +179,14 @@ p.recipe-title {
     margin: 0;
 }
 
-@media only screen and (max-width: 800px) {
-    body {
+@media only screen and (max-width: 1395px) {
+    #recipe-container {
         margin: 0;
+        padding-top: 48px;
     }
+}
 
+@media only screen and (max-width: 735px) {
     .header-sidenav-button-container {
         float: right;
         position: absolute;
@@ -202,7 +205,7 @@ p.recipe-title {
     }
 
     .recipe {
-        margin: 0 0 5px 0;
+        margin: 0 0 2px 0;
         text-align: center;
         max-width: unset;
         transition: unset;
