@@ -48,6 +48,9 @@ request.onload = function () {
         CHECKBOX.name = "addToList";
         // CHECKBOX.value = "on";
 
+        const EMPTY_DIV = document.createElement("div");
+        EMPTY_DIV.className = "";
+
         const HYPERLINK = document.createElement("a");
         HYPERLINK.href = "html/recipe.html";
         HYPERLINK.className = "recipe-link";

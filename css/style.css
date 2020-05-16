@@ -59,29 +59,32 @@ h1 {
     margin: 0;
 }
 
-.header-title {
-    font-size: 1.5em;
+.header-title-h1 {
+    font-size: 40px;
     padding: 3px;
-    width: 100%;
     background-color: #f16500;
-    line-height: 60px;
+    line-height: 50px;
 }
 
 #content {
     font-family: 'Fanwood Text', serif;
+    /*height: 100%;*/
+    /*margin-top: 120px;*/
+    padding-top: 50px;
 }
 
 #recipe-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 200px;
+    background-color: white;
+    padding-top: 60px;
+    margin: 0 150px 0;
 }
 
 .recipe {
     display: block;
-    margin: 10px;
-    /*padding: 7px;*/
+    margin: 0 5px 10px 5px;
     text-align: center;
     max-width: 400px;
     height: min-content;
@@ -150,15 +153,21 @@ p.recipe-title {
     margin: 0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+
     #content {
         margin: 0;
     }
-}
 
-@media only screen and (max-width: 545px) {
+    #recipe-container {
+        margin: 0;
+    }
+
     .recipe {
-        margin: 10px;
+        margin: 0 0 5px 0;
         text-align: center;
         max-width: unset;
         transition: unset;
@@ -173,29 +182,5 @@ p.recipe-title {
 
     .recipe:hover {
         transform: unset;
-    }
-}
-
-
-@media only screen and (max-width: 500px) {
-    body {
-        margin: 0;
-    }
-
-    .recipe {
-        margin: 10px 0;
-        text-align: center;
-        max-width: unset;
-    }
-}
-
-@media only screen and (max-width: 320px) {
-    body {
-        margin: 0;
-    }
-
-    .recipe {
-        margin: 10px 0;
-        text-align: center;
     }
 }
