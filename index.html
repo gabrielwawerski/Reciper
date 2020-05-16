@@ -38,6 +38,14 @@
             function closeNav() {
                 document.getElementById("shopping-list-sidenav").style.width = "0";
             }
+            
+            window.onorientationchange = function() {
+                if (document.getElementById("shopping-list-sidenav").style.width === "250px") {
+                    document.getElementById("shopping-list-sidenav").style.width = "100%"
+                } else {
+                    document.getElementById("shopping-list-sidenav").style.width = "250px"
+                }
+            }
         </script>
     </div>
 
