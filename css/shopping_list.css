@@ -1,0 +1,96 @@
+#shopping-list-container {
+    display: block;
+    /*background-color: #DDCECE;*/
+    background-color: #ff6b00;
+    width: 18em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    margin: 0 50px;
+    transition: all .4s ease-in-out;
+    height: 50px;
+    /*transform-origin: left top;*/
+    /*transform: scaleY(1);*/
+}
+
+#shopping-list-header {
+    display: block;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    height: 50px;
+    padding: 0 10px;
+    cursor: pointer;
+    /*background-color: #E80303;*/
+    background-color: #f16500;
+    /*background-color: #32ce00;*/
+    color: white;
+}
+
+#shopping-list-menu-text {
+    float: left;
+    font-size: 1.3em;
+    line-height: 40%;
+}
+
+#shopping-list-button-container {
+    float: right;
+    padding: 11px 2px;
+    vertical-align: middle;
+}
+
+#shopping-list-button {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    transition: all .3s ease-in-out;
+    filter: invert(100%);
+}
+
+#shopping-list-content {
+    display: none;
+    float: left;
+    clear: left;
+    width: 100%;
+    max-height: 344px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#shopping-list {
+    color: white;
+    /*padding: 0 10px;*/
+    margin: 0 10px;
+}
+
+/* width */
+#shopping-list-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+#shopping-list-content::-webkit-scrollbar-track {
+    background: #f16500;
+}
+
+/* Handle */
+#shopping-list-content::-webkit-scrollbar-thumb {
+    background: #e35f00;
+}
+
+/* Handle on hover */
+#shopping-list-content::-webkit-scrollbar-thumb:hover {
+    background: #d85f08;
+}
+
+@media only screen and (max-width: 700px) {
+    #shopping-list-container {
+        display: inline-block;
+        margin: 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+}

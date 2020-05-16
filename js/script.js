@@ -52,10 +52,8 @@ request.onload = function () {
         HYPERLINK.href = "html/recipe.html";
         HYPERLINK.className = "recipe-link";
 
-        const RECIPE_IMG = document.createElement("img");
-        RECIPE_IMG.className = "recipe-img";
-        RECIPE_IMG.src = recipes[i].img;
-        RECIPE_IMG.alt = "asd";
+        console.log(recipes[i].img);
+        IMG_CONTAINER.style.backgroundImage = `url(\"img/${recipes[i].img}\")`;
 
         const RECIPE_INFO = document.createElement("div");
         RECIPE_INFO.className = "recipe-info";
@@ -71,7 +69,6 @@ request.onload = function () {
         RECIPE_DESCRIPTION.innerText = recipes[i].description;
 
         IMG_CONTAINER.appendChild(HYPERLINK);
-        HYPERLINK.appendChild(RECIPE_IMG);
         IMG_CONTAINER.appendChild(CHECKBOX);
 
         RECIPE_INFO.appendChild(RECIPE_TITLE);
@@ -91,7 +88,7 @@ request.onload = function () {
 
         recipeArray.push(recipe);
 
-        [RECIPE_IMG, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
+        [IMG_CONTAINER, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
             localStorage.setItem("productList", recipes[i].productList);

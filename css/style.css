@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    font-family: 'Hind Siliguri', sans-serif;
     box-sizing: border-box;
-    background: url("../img/background.jpg") no-repeat center center fixed;
+    background: url("../img/background.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -31,138 +38,75 @@ li {
     list-style: none;
 }
 
+h1 {
+    margin: 0;
+}
+
 .dotted {
     border-bottom: 1px dotted white;
 }
 
-/* width */
-#shopping-list-content::-webkit-scrollbar {
-    width: 12px;
-}
-
-/* Track */
-#shopping-list-content::-webkit-scrollbar-track {
-    background: #f16500;
-}
-
-/* Handle */
-#shopping-list-content::-webkit-scrollbar-thumb {
-    background: #e35f00;
-}
-
-/* Handle on hover */
-#shopping-list-content::-webkit-scrollbar-thumb:hover {
-    background: #d85f08;
-}
-
-#shopping-list-container {
-    display: block;
-    /*background-color: #DDCECE;*/
-    background-color: #ff6b00;
-    width: 18em;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    margin: 0 50px;
-    transition: all .4s ease-in-out;
-    height: 50px;
-    /*transform-origin: left top;*/
-    /*transform: scaleY(1);*/
-}
-
-#shopping-list-header {
-    display: block;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    height: 50px;
-    padding: 0 10px;
-    cursor: pointer;
-    /*background-color: #E80303;*/
-    background-color: #f16500;
-    /*background-color: #32ce00;*/
-    color: white;
-}
-
-#shopping-list-menu-text {
-    float: left;
-    font-size: 1.3em;
-    line-height: 40%;
-}
-
-#shopping-list-button-container {
-    float: right;
-    padding: 11px 2px;
-    vertical-align: middle;
-}
-
-#shopping-list-button {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    transition: all .3s ease-in-out;
-    filter: invert(100%);
-}
-
-#shopping-list-content {
-    display: none;
-    float: left;
-    clear: left;
-    width: 100%;
-    max-height: 344px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-#shopping-list {
-    color: white;
-    /*padding: 0 10px;*/
-    margin: 0 10px;
-}
-
 .header {
+    padding: 0;
     text-align: center;
+    color: white;
+    font-family: 'Rochester', cursive;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin: 0;
+}
+
+.header-title {
+    font-size: 1.5em;
+    padding: 3px;
+    width: 100%;
+    background-color: #f16500;
+    line-height: 60px;
 }
 
 #content {
-    margin: 20px 100px 200px 100px;
+    font-family: 'Fanwood Text', serif;
 }
 
 #recipe-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 200px;
 }
 
 .recipe {
+    display: block;
     margin: 10px;
+    /*padding: 7px;*/
     text-align: center;
-    max-width: 225px;
+    max-width: 400px;
     height: min-content;
-    transition: all 0.5s;
-}
-
-.recipe:hover {
-    transform: scale(1.01);
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .img-container {
     display: block;
     float: left;
-    width: 225px;
+    width: 400px;
     height: 225px;
     position: relative;
+    background: no-repeat center center;
+    background-size: cover;
+    /*border-bottom: solid 1px black;*/
 }
 
 .recipe-img {
     /*remove empty space under the image*/
     vertical-align: bottom;
-    width: 225px;
-    height: 225px;
-    background-color: white;
+    height: auto;
+    max-width: 100%;
 }
 
+/*background: url("../img/background.jpg") no-repeat center center fixed;*/
 .recipe-link {
 }
 
@@ -180,33 +124,33 @@ li {
     display: inline-block;
     width: 100%;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.75);
+    /*backdrop-filter: blur(2px);*/
+    /*background-color: #ff6b00;*/
 }
 
 .recipe-title {
-    background-color: white;
+    color: #996113;
     font-size: 24px;
-    padding: 2px 10px;
+    font-weight: bold;
+}
+
+p.recipe-title {
     margin: 0;
+    padding: 10px 5px 5px 5px;
+    line-height: 30px;
 }
 
 .recipe-description {
-    background-color: white;
-    font-size: 16px;
-    text-align: justify;
-    padding: 5px 8px;
+    /*background-color: #ff6b00;*/
+    color: black;
+    font-size: 19px;
+    text-align: center;
+    padding: 5px 5px 2px 5px;
     margin: 0;
 }
 
 @media only screen and (max-width: 700px) {
-    #shopping-list-container {
-        display: inline-block;
-        margin: 0;
-        width: 100%;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
-
     #content {
         margin: 0;
     }
@@ -222,11 +166,9 @@ li {
     }
 
     .img-container {
-        border-style: solid;
-        border-color: white;
         margin: 0;
         padding: 0;
-        width: 99%;
+        width: 100%;
     }
 
     .recipe:hover {
