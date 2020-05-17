@@ -38,17 +38,16 @@
             }
 
             window.addEventListener('resize', reportWindowSize);
-
             let media = window.matchMedia("(max-width: 735px)");
-            window.addEventListener('orientationchange', function () {
-                if (document.getElementById("shopping-list-sidenav").style.width === "0") {
 
-                } else if (document.getElementById("shopping-list-sidenav").style.width === "280px") {
-                    document.getElementById("shopping-list-sidenav").style.width = "100%"
-                } else if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
-                    document.getElementById("shopping-list-sidenav").style.width = "280px"
-                }
-            });
+            // window.addEventListener('orientationchange', function () {
+            //     if (document.getElementById("shopping-list-sidenav").style.width === "0") {
+            //     } else if (document.getElementById("shopping-list-sidenav").style.width === "280px") {
+            //         document.getElementById("shopping-list-sidenav").style.width = "100%"
+            //     } else if (document.getElementById("shopping-list-sidenav").style.width === "100%") {
+            //         document.getElementById("shopping-list-sidenav").style.width = "280px"
+            //     }
+            // });
 
             function openNav() {
                 if (media.matches) {
