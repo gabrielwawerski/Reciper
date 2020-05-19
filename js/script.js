@@ -95,7 +95,6 @@ request.onload = function () {
         }));
     }
 
-
     const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 
     function createListEntry(productName, id) {
@@ -135,6 +134,7 @@ request.onload = function () {
         return SHOPPING_LIST_ENTRY;
     }
 
+    // TODO shopping list content transferrable between recipe.html and index
     // handle adding and removing list items
     for (let i = 0; i < recipeArray.length; i++) {
         recipeArray[i].checkbox.addEventListener('click', function () {
