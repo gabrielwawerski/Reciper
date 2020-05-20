@@ -155,6 +155,7 @@ request.onload = function () {
 
 // TODO mozliwosc wyboru ile porcji chcesz miec z przepisu, lista to uwzglednia
 // TODO produkty ktore mozna zastapic, np. sos pomidorowy / koncentrat - odzeierciedlic to na liscie
+// TODO dodanie translatora google - zembeddowanie go
 // TODO ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
 // TODO MOZLIWOSC ROZWINIECIA LISTY NA CALY EKRAN NA MOBILE
 // TODO MOZLIWOSC DODAWANIA WLASNYCH POZYCJI DO SHOPPING LISTY - INPUT FIELD NA DOLE Z PLUSIKIEM PO PRAWEJ
