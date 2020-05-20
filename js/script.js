@@ -20,16 +20,24 @@ class Recipe {
     }
 }
 
-Element.prototype.remove = function() {
+Element.prototype.remove = function () {
     this.parentElement.removeChild(this);
 };
 
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(let i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+    for (let i = this.length - 1; i >= 0; i--) {
+        if (this[i] && this[i].parentElement) {
             this[i].parentElement.removeChild(this[i]);
         }
     }
+};
+
+Storage.prototype.setObject = function (key, value) {
+    this.setItem(key, JSON.stringify(value));
+};
+
+Storage.prototype.getObject = function (key) {
+    return JSON.parse(this.getItem(key));
 };
 
 request.onload = function () {
@@ -95,9 +103,9 @@ request.onload = function () {
         }));
     }
 
-    const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+    let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 
-    function createListEntry(productName, id) {
+    function createListEntryMarkup(productName, id) {
         const STRIKE_THROUGH = document.createElement("div");
         STRIKE_THROUGH.className = "strike-through";
 
@@ -134,28 +142,46 @@ request.onload = function () {
         return SHOPPING_LIST_ENTRY;
     }
 
+    // console.log(SHOPPING_LIST_CONTENT);
+    localStorage.setItem("products", JSON.stringify(SHOPPING_LIST_CONTENT));
+    // console.log(SHOPPING_LIST_CONTENT.innerHTML);
+
+    class ShoppingListEntry {
+        constructor(productList, index, checkbox) {
+            this.productList = productList;
+            this.index = index;
+            this.checkbox = checkbox;
+        }
+    }
+
+    let listEntries = [];
+
     // TODO shopping list content transferrable between recipe.html and index
     // handle adding and removing list items
     for (let i = 0; i < recipeArray.length; i++) {
         recipeArray[i].checkbox.addEventListener('click', function () {
-            console.log("clicked!");
             let products = recipeArray[i].productList;
 
             if (recipeArray[i].checkbox.checked === true) {
                 for (let j = 0; j < products.length; j++) {
-                    console.log("tried adding!");
-                    SHOPPING_LIST_CONTENT.append(createListEntry(products[j], i.toString()));
+                    SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(products[j], i.toString()));
                 }
+                listEntries.push(new ShoppingListEntry(products, i.toString(), recipeArray[i].checkbox));
+                console.log("added! length: " + listEntries.length);
+                localStorage.setItem("shoppingListItems", JSON.stringify(listEntries));
+                console.log(JSON.parse(localStorage.getItem("shoppingListItems")));
             } else {
                 document.getElementsByClassName(i.toString()).remove();
+                listEntries.splice(0, 1);
+                console.log("removed! length: " + listEntries.length);
             }
         })
     }
+
 };
+
 
 // TODO mozliwosc wyboru ile porcji chcesz miec z przepisu, lista to uwzglednia
 // TODO produkty ktore mozna zastapic, np. sos pomidorowy / koncentrat - odzeierciedlic to na liscie
 // TODO dodanie translatora google - zembeddowanie go
-// TODO ZAMIAST CHECKBOXA: DIV, IMG - ZIELONY PLUS, CZERWONY MINUS
-// TODO MOZLIWOSC ROZWINIECIA LISTY NA CALY EKRAN NA MOBILE
 // TODO MOZLIWOSC DODAWANIA WLASNYCH POZYCJI DO SHOPPING LISTY - INPUT FIELD NA DOLE Z PLUSIKIEM PO PRAWEJ
