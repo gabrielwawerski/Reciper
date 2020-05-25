@@ -10,16 +10,14 @@ RECIPE_IMG.style.backgroundImage = `url(\"../img/${localStorage.getItem("img")}\
 let ingredients = localStorage.getItem("productList").split(",");
 let recipeInstruction = localStorage.getItem("instructions").split(",");
 
-const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
-let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));
-console.log(shoppingListItems);
-console.log(shoppingListItems[0].checkbox);
-
-for (let i of shoppingListItems) {
-    for (let item of i.productList) {
-        SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(item, i.index))
-    }
-}
+// const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+// let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));
+//
+// for (let i of shoppingListItems) {
+//     for (let item of i.productList) {
+//         SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(item, i.index))
+//     }
+// }
 
 for (let i = 0; i < ingredients.length; i++) {
     const LIST_ITEM = document.createElement('li');
