@@ -127,6 +127,7 @@ body {
 
 #recipe-instructions-data > li {
     font-size: 20px;
+    margin: 5px 0 0 0;
 }
 
 ul {
