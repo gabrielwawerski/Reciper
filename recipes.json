@@ -31,7 +31,7 @@
       "img": "pasta-salad.jpg",
       "productList": [
         "product1",
-        "product2"
+        "|product2"
       ],
       "description": "Dobre kurwa gówno! Spróbuj a nie pożałujesz! Naprawdę, nie kłamię!",
       "instructions": "pasta salad description"
@@ -41,10 +41,10 @@
       "img": "spaghetti-carbonara.jpg",
       "productList": [
         "spaghetti pasta",
-        "350g of bacon",
-        "sour double cream",
-        "parmesan cheese",
-        "2 eggs"
+        "|350g of bacon",
+        "|sour double cream",
+        "|parmesan cheese",
+        "|2 eggs"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "carbonara description"
@@ -54,10 +54,10 @@
       "img": "pasta-salad.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -67,10 +67,10 @@
       "img": "risotto.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -80,10 +80,10 @@
       "img": "spaghetti-carbonara.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -93,10 +93,10 @@
       "img": "risotto.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -106,10 +106,10 @@
       "img": "pasta-salad.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -119,10 +119,10 @@
       "img": "risotto.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!"
@@ -132,10 +132,10 @@
       "img": "spaghetti-carbonara.jpg",
       "productList": [
         "product1",
-        "product2",
-        "product3",
-        "product4",
-        "product5"
+        "|product2",
+        "|product3",
+        "|product4",
+        "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": "These are the instructions.-Second instruction-And a third!-Fourth-asd-DSA-ASd-ASD-ASD-ASD-ASD-ASD-ASD-ASDASDASDASDASDASD"
