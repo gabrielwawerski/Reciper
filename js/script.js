@@ -44,6 +44,7 @@ request.onload = function () {
     let json = request.response;
     let recipes = json.recipes;
     let recipeArray = [];
+    let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 
     for (let i = 0; i < recipes.length; i++) {
         const RECIPE = document.createElement("div");
@@ -103,7 +104,12 @@ request.onload = function () {
         }));
     }
 
-    let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
+    let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));
+    for (let i of shoppingListItems) {
+        for (let item of i.productList) {
+            SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(item, i.index))
+        }
+    }
 
     function createListEntryMarkup(productName, id) {
         const STRIKE_THROUGH = document.createElement("div");
@@ -143,13 +149,13 @@ request.onload = function () {
     }
 
     // console.log(SHOPPING_LIST_CONTENT);
-    localStorage.setItem("products", JSON.stringify(SHOPPING_LIST_CONTENT));
+
     // console.log(SHOPPING_LIST_CONTENT.innerHTML);
 
     class ShoppingListEntry {
-        constructor(productList, index, checkbox) {
-            this.productList = productList;
+        constructor(index, productList, checkbox) {
             this.index = index;
+            this.productList = productList;
             this.checkbox = checkbox;
         }
     }
@@ -166,7 +172,7 @@ request.onload = function () {
                 for (let j = 0; j < products.length; j++) {
                     SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(products[j], i.toString()));
                 }
-                listEntries.push(new ShoppingListEntry(products, i.toString(), recipeArray[i].checkbox));
+                listEntries.push(new ShoppingListEntry(i.toString(), products, recipeArray[i].checkbox.checked));
                 console.log("added! length: " + listEntries.length);
                 localStorage.setItem("shoppingListItems", JSON.stringify(listEntries));
                 console.log(JSON.parse(localStorage.getItem("shoppingListItems")));
@@ -177,9 +183,7 @@ request.onload = function () {
             }
         })
     }
-
 };
-
 
 // TODO mozliwosc wyboru ile porcji chcesz miec z przepisu, lista to uwzglednia
 // TODO produkty ktore mozna zastapic, np. sos pomidorowy / koncentrat - odzeierciedlic to na liscie
