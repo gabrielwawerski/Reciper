@@ -216,9 +216,17 @@ li {
         margin: 0;
     }
 
+    #ingredients {
+        text-align: center;
+    }
+
     #recipe-instructions-container {
         margin: 0;
         width: unset;
+    }
+
+    #recipe-instructions-name {
+        text-align: center;
     }
 }
 
