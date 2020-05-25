@@ -138,7 +138,20 @@
         "|product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!-Fourth-asd-DSA-ASd-ASD-ASD-ASD-ASD-ASD-ASD-ASDASDASDASDASDASD"
+      "instructions": [
+        "These are the instructions.",
+        "|Second instruction-----ASD-ASD-ASD-ASD-ASD-ASD-ASDASDASDASDASDASD",
+        "|And a third!",
+        "|Fourth",
+        "|asd",
+        "|DSA",
+        "|ASd",
+        "|ASd",
+        "|ASd",
+        "|ASd",
+        "|ASd",
+        "|ASDASDASDASDASDASD"
+      ]
     }
   ]
 }
