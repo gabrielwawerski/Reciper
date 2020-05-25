@@ -7,8 +7,8 @@ RECIPE_NAME.innerText = localStorage.getItem("name");
 RECIPE_IMG.style.backgroundImage = `url(\"../img/${localStorage.getItem("img")}\")`;
 
 
-let ingredients = localStorage.getItem("productList").split(",");
-let recipeInstruction = localStorage.getItem("instructions").split(",");
+let ingredients = localStorage.getItem("productList").split("|");
+let recipeInstruction = localStorage.getItem("instructions").split("|");
 
 // const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 // let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));

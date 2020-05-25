@@ -5,25 +5,25 @@
       "img": "risotto.jpg",
       "productList": [
         "1 cebula",
-        "1 zabek czosnku",
-        "1 pojedynczy filet z kurczaka",
-        "1/3 szklanki ryzu do risotto (arborio)",
-        "1/4 szklanki bialego wina",
-        "1 czerwona papryka",
-        "200 g cukinii",
-        "przyprawy: po 1/3 lyzeczki: kurkumy, oregano, tymianku, papryki ostrej lub slodkiej",
-        "ok. 500ml bulionu drobiowego",
-        "1/3 szklanki tartego parmezanu",
-        "ok. 50g gorgonzoli",
-        "1 lyzka posiekanej natki lub garsc pokrojonej rukoli",
-        "maslo, oliwa extra virgin"
+        "|1 zabek czosnku",
+        "|1 pojedynczy filet z kurczaka",
+        "|1/3 szklanki ryzu do risotto (arborio)",
+        "|1/4 szklanki bialego wina",
+        "|1 czerwona papryka",
+        "|200 g cukinii",
+        "|przyprawy: po 1/3 lyzeczki: kurkumy, oregano, tymianku, papryki ostrej lub slodkiej",
+        "|ok. 500ml bulionu drobiowego",
+        "|1/3 szklanki tartego parmezanu",
+        "|ok. 50g gorgonzoli",
+        "|1 lyzka posiekanej natki lub garsc pokrojonej rukoli",
+        "|maslo, oliwa extra virgin"
       ],
       "description": "A lovely and easy to make meal, healthy too!",
       "instructions": [
         "W garnku na 1 lyzce oliwy zeszklic pokrojona w kosteczke cebule oraz starty na tarce czosnek. Przesunac je na bok garnka, a w wolne miejsce wlozyc 1 łyzke masla oraz pokrojonego w kosteczke kurczaka, doprawic go sola oraz pieprzem i obsmazac przez okolo 3 minuty co chwile mieszajac.",
-        "Dodac ryz i dokladnie go obsmazyc. Wlac wino i gotowac przez kilkanascie sekund az odparuje. Nastepnie dodac pokrojona w kosteczke papryke i cukinie i smazyc razem przez okolo minute. W miedzyczasie dodac wszystkie przyprawy.",
-        "Wlewac po okolo pol szklanki gorącego bulionu i gotowac bez przykrycia od czasu do czasu mieszajac przez okolo 15 minut. Dodac kolejna porcje bulionu gdy poprzednia bedzie wchłonieta przez ryz. Na koniec ryz ma byc ugotowany al dente.",
-        "Odstawic z ognia, dodac posiekana natke lub pokrojona na kawalki rukole, 2/3 ilosci tartego parmezanu, 2 lyzki masla oraz pokrojona na kawalki gorgonzole jesli jej uzywamy, wymieszac. Wylozyc na talerze, posypac reszta sera."
+        "|Dodac ryz i dokladnie go obsmazyc. Wlac wino i gotowac przez kilkanascie sekund az odparuje. Nastepnie dodac pokrojona w kosteczke papryke i cukinie i smazyc razem przez okolo minute. W miedzyczasie dodac wszystkie przyprawy.",
+        "|Wlewac po okolo pol szklanki gorącego bulionu i gotowac bez przykrycia od czasu do czasu mieszajac przez okolo 15 minut. Dodac kolejna porcje bulionu gdy poprzednia bedzie wchłonieta przez ryz. Na koniec ryz ma byc ugotowany al dente.",
+        "|Odstawic z ognia, dodac posiekana natke lub pokrojona na kawalki rukole, 2/3 ilosci tartego parmezanu, 2 lyzki masla oraz pokrojona na kawalki gorgonzole jesli jej uzywamy, wymieszac. Wylozyc na talerze, posypac reszta sera."
       ]
     },
     {
