@@ -54,6 +54,7 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 50px;
     z-index: 1;
     margin: 0;
     background-color: #f16500;
