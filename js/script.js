@@ -97,18 +97,11 @@ request.onload = function () {
         [IMG_CONTAINER, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
-            localStorage.setItem("productList", recipes[i].productList);
-            localStorage.setItem("instructions", recipes[i].instructions);
+            localStorage.setItem("productList", JSON.stringify(recipes[i].productList));
+            localStorage.setItem("instructions", JSON.stringify(recipes[i].instructions));
 
             window.location.assign("html/recipe.html");
         }));
-    }
-
-    let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));
-    for (let i of shoppingListItems) {
-        for (let item of i.productList) {
-            SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(item, i.index))
-        }
     }
 
     function createListEntryMarkup(productName, id) {
@@ -148,10 +141,6 @@ request.onload = function () {
         return SHOPPING_LIST_ENTRY;
     }
 
-    // console.log(SHOPPING_LIST_CONTENT);
-
-    // console.log(SHOPPING_LIST_CONTENT.innerHTML);
-
     class ShoppingListEntry {
         constructor(index, productList, checkbox) {
             this.index = index;
@@ -173,15 +162,13 @@ request.onload = function () {
                     SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(products[j], i.toString()));
                 }
                 listEntries.push(new ShoppingListEntry(i.toString(), products, recipeArray[i].checkbox.checked));
-                console.log("added! length: " + listEntries.length);
                 localStorage.setItem("shoppingListItems", JSON.stringify(listEntries));
-                console.log(JSON.parse(localStorage.getItem("shoppingListItems")));
             } else {
                 document.getElementsByClassName(i.toString()).remove();
-                listEntries.splice(0, 1);
-                console.log("removed! length: " + listEntries.length);
+                listEntries.splice(i, 1);
+                localStorage.setItem("shoppingListItems", JSON.stringify(listEntries));
             }
-        })
+        });
     }
 };
 
