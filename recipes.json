@@ -37,7 +37,9 @@
         "product2"
       ],
       "description": "Dobre kurwa gówno! Spróbuj a nie pożałujesz! Naprawdę, nie kłamię!",
-      "instructions": "pasta salad description"
+      "instructions": [
+        "pasta salad description"
+      ]
     },
     {
       "name": "Spaghetti Carbonara",
@@ -50,7 +52,9 @@
         "2 eggs"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "carbonara description"
+      "instructions": [
+        "carbonara description"
+        ]
     },
     {
       "name": "Recipe4",
@@ -63,7 +67,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe5",
@@ -76,7 +84,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe6",
@@ -89,7 +101,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe7",
@@ -102,7 +118,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe8",
@@ -115,7 +135,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe9",
@@ -128,7 +152,11 @@
         "product5"
       ],
       "description": "Lorem ipsum dolor sit amet",
-      "instructions": "These are the instructions.-Second instruction-And a third!"
+      "instructions": [
+        "These are the instructions.",
+        "Second instruction",
+        "And a third!"
+      ]
     },
     {
       "name": "Recipe10",
