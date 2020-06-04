@@ -1,25 +1,3 @@
-// populates flex container with data from json
-const REQUEST_URL = 'https://gabrielwawerski.github.io/Reciper/recipes.json';
-const RECIPE_CONTAINER = document.getElementById('recipe-container');
-let request = new XMLHttpRequest();
-
-request.open('GET', REQUEST_URL);
-request.responseType = 'json';
-request.send();
-
-// klasa recipe - dane z jsona + dom element checkbox w niej
-
-class Recipe {
-    constructor(name, img, productList, description, instructions, checkbox) {
-        this.name = name;
-        this.img = img;
-        this.productList = productList;
-        this.description = description;
-        this.instructions = instructions;
-        this.checkbox = checkbox;
-    }
-}
-
 Element.prototype.remove = function () {
     this.parentElement.removeChild(this);
 };
@@ -40,12 +18,34 @@ Storage.prototype.getObject = function (key) {
     return JSON.parse(this.getItem(key));
 };
 
+
+const REQUEST_URL = 'https://gabrielwawerski.github.io/Reciper/recipes.json';
+const RECIPE_CONTAINER = document.getElementById('recipe-container');
+let request = new XMLHttpRequest();
+
+request.open('GET', REQUEST_URL);
+request.responseType = 'json';
+request.send();
+
+// klasa recipe - dane z jsona + dom element checkbox w niej
+class Recipe {
+    constructor(name, img, productList, description, instructions, checkbox) {
+        this.name = name;
+        this.img = img;
+        this.productList = productList;
+        this.description = description;
+        this.instructions = instructions;
+        this.checkbox = checkbox;
+    }
+}
+
 request.onload = function () {
     let json = request.response;
     let recipes = json.recipes;
     let recipeArray = [];
     let SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 
+    // create recipes with data from json and add them to recipe container
     for (let i = 0; i < recipes.length; i++) {
         const RECIPE = document.createElement("div");
         RECIPE.className = "recipe";
@@ -94,6 +94,7 @@ request.onload = function () {
 
         recipeArray.push(recipe);
 
+        // sends each recipe data to recipe.html
         [IMG_CONTAINER, RECIPE_INFO].forEach(item => item.addEventListener('click', function () {
             localStorage.setItem("name", recipes[i].name);
             localStorage.setItem("img", recipes[i].img);
@@ -152,7 +153,7 @@ request.onload = function () {
     let listEntries = [];
 
     // TODO shopping list content transferrable between recipe.html and index
-    // handle adding and removing list items
+    // handles adding and removing list items
     for (let i = 0; i < recipeArray.length; i++) {
         recipeArray[i].checkbox.addEventListener('click', function () {
             let products = recipeArray[i].productList;

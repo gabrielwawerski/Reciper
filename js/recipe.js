@@ -6,27 +6,28 @@ const RECIPE_LIST = document.getElementById('recipe-instructions-data');
 RECIPE_NAME.innerText = localStorage.getItem("name");
 RECIPE_IMG.style.backgroundImage = `url(\"../img/${localStorage.getItem("img")}\")`;
 
-
 let ingredients = JSON.parse(localStorage.getItem("productList"));
 let recipeInstruction = JSON.parse(localStorage.getItem("instructions"));
-
-console.log(recipeInstruction);
 
 const SHOPPING_LIST_CONTENT = document.getElementById('shopping-list-content');
 let shoppingListItems = JSON.parse(localStorage.getItem("shoppingListItems"));
 
+
+// populate shopping list with data from index
 for (let i of shoppingListItems) {
     for (let item of i.productList) {
         SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(item, i.index))
     }
 }
 
+// populate ingredient list
 for (let i = 0; i < ingredients.length; i++) {
     const LIST_ITEM = document.createElement('li');
     LIST_ITEM.appendChild(document.createTextNode(ingredients[i]));
     INGREDIENTS_LIST.appendChild(LIST_ITEM);
 }
 
+// populate instruction list
 for (let i = 0; i < recipeInstruction.length; i++) {
     const LIST_ITEM = document.createElement('li');
     LIST_ITEM.appendChild(document.createTextNode(recipeInstruction[i]));
