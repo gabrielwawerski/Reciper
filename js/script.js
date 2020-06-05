@@ -162,7 +162,7 @@ request.onload = function () {
                 for (let j = 0; j < products.length; j++) {
                     SHOPPING_LIST_CONTENT.appendChild(createListEntryMarkup(products[j], i.toString()));
                 }
-                listEntries.push(new ShoppingListEntry(i.toString(), products, recipeArray[i].checkbox.checked));
+                listEntries.push(new ShoppingListEntry(i.toString(), products, recipeArray[i].checkbox));
                 localStorage.setItem("shoppingListItems", JSON.stringify(listEntries));
             } else {
                 document.getElementsByClassName(i.toString()).remove();

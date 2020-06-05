@@ -33,28 +33,37 @@
       "name": "Pasta salad with bacon",
       "img": "pasta-salad.jpg",
       "productList": [
-        "product1",
-        "product2"
+        "makaron dragon",
+        "ser zolty",
+        "puszka kukurydzy",
+        "puszka ananasa",
+        "boczek",
+        "majonez"
       ],
       "description": "Dobre kurwa gówno! Spróbuj a nie pożałujesz! Naprawdę, nie kłamię!",
       "instructions": [
-        "pasta salad description"
+        "Zacznij smazyc boczek i gotowac makaron",
+        "Pokroj ser w kostke, pokroj ananasa, wrzuc do miski",
+        "Dodaj makaron i boczek do miski, dodaj sol i pieprz, majonez i wymieszaj"
       ]
     },
     {
       "name": "Spaghetti Carbonara",
       "img": "spaghetti-carbonara.jpg",
       "productList": [
-        "spaghetti pasta",
-        "350g of bacon",
-        "sour double cream",
-        "parmesan cheese",
-        "2 eggs"
+        "makaron spaghetti",
+        "350g boczku",
+        "smietana double",
+        "ser parmezan",
+        "2 jajka"
       ],
       "description": "Lorem ipsum dolor sit amet",
       "instructions": [
-        "carbonara description"
-        ]
+        "Zacznij smazyc boczek i gotowac makaron",
+        "Przygotuj sos: do naczynia dodaj parmezan, smietane i 2 jajka, dodaj pieprzu i soli",
+        "Kiedy boczek bedzie brazowy, dodaj do niego makaron, pomieszaj chwile",
+        "Wlej sos i mieszaj przez ok. 2 minuty."
+      ]
     },
     {
       "name": "Recipe4",
