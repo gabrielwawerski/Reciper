@@ -72,7 +72,7 @@ h1 {
 
 .header-title-h1 {
     font-size: 35px;
-    padding: 3px;
+    margin: 1px 0 0 2px;
 }
 
 .header-sidenav-button-container {
