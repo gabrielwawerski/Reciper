@@ -39,6 +39,10 @@ class Recipe {
     }
 }
 
+function scrollUp() {
+    window.scrollTo(0, 0);
+}
+
 request.onload = function () {
     let json = request.response;
     let recipes = json.recipes;
